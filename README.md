@@ -73,7 +73,7 @@ pip install tensorflow numpy scikit-learn
 ```
 ## Running the Project
 
-    Preparing and Training the Model
+### Preparing and Training the Model
 
 To train the model on your dataset, run the following command:
 ```bash
@@ -81,7 +81,7 @@ python src/main.py
 ```
 You will be prompted whether you want to train the model. If you select "Yes", it will train the model using the data in the data/Training directory and save it as model/brain_tumor_detection_model.h5.
 
-    Evaluating the Model
+### Evaluating the Model
 
 Once the model is trained or if you already have a pre-trained model, you can evaluate its performance on the test data:
 ```bash
@@ -89,7 +89,7 @@ python src/main.py
 ```
 This will load the model, evaluate it on the test data, and print metrics such as accuracy, loss, confusion matrix, and classification report.
 
-    Making Predictions
+### Making Predictions
 
 To make predictions on a new image, run:
 ```bash
