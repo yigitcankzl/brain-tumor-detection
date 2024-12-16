@@ -71,9 +71,9 @@ pip install tensorflow numpy scikit-learn
 1. **`Preparing and Training the Model`**
 
 To train the model on your dataset:
-
+```bash
 python train_model.py
-
+```
 This will load the training data from the data/Training directory, train the model, and save it as model/brain_tumor_detection_model.h5.
 2. **`Evaluating the Model`**
 
