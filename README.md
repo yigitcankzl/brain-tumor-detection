@@ -11,11 +11,12 @@ brain-tumor-detection/
 │   └── Testing/
 ├── model/
 │   └── brain_tumor_detection_model.h5  (Pre-trained model)
-└──src/
-    ├── train_model.py   
+└── src/
+    ├── train_model.py
     ├── data_preparation.py
     ├── use_model.py
     ├── predict.py
+    ├── main.py
     ├── README.md
     └── requirements.txt
 
@@ -34,8 +35,11 @@ brain-tumor-detection/
 
 4. **`predict.py`**:
    - Accepts a user-provided image path, preprocesses the image, and predicts the tumor type using the trained model.
+     
+5. **`main.py`**:
+    -Main script to orchestrate the project. This script can be used to train, evaluate, or predict tumor types based on the user's choice.
 
-5. **`requirements.txt`**:
+7. **`requirements.txt`**:
    - Lists all the required Python packages to run the project.
 
 ## Installation
@@ -64,32 +68,35 @@ Dependencies
     scikit-learn
 
 Alternatively, you can install the dependencies manually by running:
-
+```bash
 pip install tensorflow numpy scikit-learn
-
+```
 ## Running the Project
-1. **`Preparing and Training the Model`**
 
-To train the model on your dataset:
+    Preparing and Training the Model
+
+To train the model on your dataset, run the following command:
 ```bash
-python train_model.py
+python src/main.py
 ```
-This will load the training data from the data/Training directory, train the model, and save it as model/brain_tumor_detection_model.h5.
-2. **`Evaluating the Model`**
+You will be prompted whether you want to train the model. If you select "Yes", it will train the model using the data in the data/Training directory and save it as model/brain_tumor_detection_model.h5.
 
-Once the model is trained or if you have a pre-trained model, you can evaluate its performance on the test data:
+    Evaluating the Model
+
+Once the model is trained or if you already have a pre-trained model, you can evaluate its performance on the test data:
 ```bash
-python use_model.py
+python src/main.py
 ```
-This will load the model, evaluate it on the test data, and print the accuracy, loss, confusion matrix, and classification report.
-3. **`Making Predictions`**
+This will load the model, evaluate it on the test data, and print metrics such as accuracy, loss, confusion matrix, and classification report.
 
-To make predictions on a new image:
+    Making Predictions
+
+To make predictions on a new image, run:
 ```bash
-python predict.py
+python src/predict.py
 ```
 You will be prompted to enter the path to the image. The script will process the image and print the predicted tumor type.
-Data
+## Data
 
 Ensure that you have your training and testing images organized in directories. The directory structure should look like this:
 
