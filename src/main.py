@@ -20,7 +20,7 @@ def main():
         print("Skipping model training, using the pre-trained model.")
     
     print("Evaluating the model...")
-    evaluate_model("src/model/brain_tumor_detection_model.h5", test_generator)
+    evaluate_model("model/brain_tumor_detection_model.h5", test_generator)
 
 if __name__ == "__main__":
     main() 
