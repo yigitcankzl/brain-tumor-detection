@@ -5,7 +5,7 @@ import os
 
 categories = ["glioma", "meningioma", "notumor", "pituitary"]
 
-model = load_model('src/model/brain_tumor_detection_model.h5')
+model = load_model('model/brain_tumor_detection_model.h5')
 
 def prepare_image(img_path):
     img = image.load_img(img_path, target_size=(150, 150))  
