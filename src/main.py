@@ -1,6 +1,8 @@
 from data_preparation import prepare_data
 from train_model import train_model
 from use_model import evaluate_model
+import os
+
 
 def main():
     train_dir = "data/Training"
