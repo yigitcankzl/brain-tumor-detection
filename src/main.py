@@ -2,7 +2,7 @@ from data_preparation import prepare_data
 from train_model import train_model
 from use_model import evaluate_model
 import os
-
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 def main():
     train_dir = "data/Training"
